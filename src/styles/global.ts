@@ -16,12 +16,13 @@ export default createGlobalStyle`
   }
 
   html {
-    background: var(--dark);
+    background: var(--dark-primary);
     color: var(--text-primary);
   }
 
   :root {
-    --dark: #111;
+    --dark-primary: rgb(17, 17, 17);
+    --dark-secondary: rgb(40, 40, 40);
     --text-primary: #c9d1d9;
     --primary: #420F56;
     --secondary: #591F6F;
