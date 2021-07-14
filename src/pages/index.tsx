@@ -1,7 +1,13 @@
-export default function Home() {
+import { Header } from '../components/Header'
+
+import { Container } from '../styles/home'
+
+export const Home: React.FC = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <Container>
+      <Header />
+    </Container>
   )
 }
+
+export default Home
