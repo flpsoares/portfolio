@@ -24,11 +24,11 @@ export const Item = styled.li`
     display: flex;
     flex-direction: column;
 
-    transition: width 0.2s;
+    transition: width 0.5s;
 
     &::after {
       content: '';
-      transition: width 0.2s;
+      transition: width 0.5s;
       margin: auto;
       width: 0px;
       height: 2.5px;
