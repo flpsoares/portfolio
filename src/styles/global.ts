@@ -22,7 +22,7 @@ export default createGlobalStyle`
 
   :root {
     --dark-primary: rgb(17, 17, 17);
-    --dark-secondary: rgb(40, 40, 40);
+    --dark-secondary: rgb(25, 25, 25);
     --text-primary: #c9d1d9;
     --primary: #420F56;
     --secondary: #591F6F;
