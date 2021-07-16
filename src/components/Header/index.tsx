@@ -5,13 +5,13 @@ export const Header: React.FC = () => {
     <Container>
       <Menu>
         <Item>
-          <a href="#">Sobre mim</a>
+          <a href="#">Sobre</a>
         </Item>
         <Item>
           <a href="#">Projetos</a>
         </Item>
         <Item>
-          <a href="#">Principais tecnologias</a>
+          <a href="#">Tecnologias</a>
         </Item>
         <Item>
           <a href="#">Contato</a>
