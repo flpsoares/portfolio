@@ -17,7 +17,7 @@ export const Project: React.FC = () => {
         <Description>
           Uma rede social moderna que possibilita a postagem de textos e fotos.
         </Description>
-        <Button>Ver fotos</Button>
+        <Button>Ver detalhes</Button>
       </Infos>
     </Container>
   )
