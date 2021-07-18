@@ -13,7 +13,7 @@ export const Container = styled(motion.div)`
 `
 
 export const Overlay = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
 
@@ -34,30 +34,13 @@ export const OverlayBody = styled(Overlay)`
   z-index: 6;
 `
 
-export const Box = styled(motion.div)`
-  width: 60%;
-  height: 85%;
-
-  border-radius: 5px;
-  padding: 24px;
-
-  margin: auto;
-
-  background: rgba(0, 0, 0, 0.7);
-
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`
-
 export const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
-
+  top: 100px;
+  right: 125px;
   color: var(--text-primary);
+
+  z-index: 7;
 
   transition: filter 0.2s;
 

@@ -16,9 +16,11 @@ import Image from 'next/image'
 import { MdClose } from 'react-icons/md'
 import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
+import { ModalCarousel } from '../ModalCarousel'
 
 export const ModalProject: React.FC = () => {
-  const { closeModalProject } = useContext(ModalContext)
+  const { closeModalProject, modalCarouselIsOpen, openModalCarousel } =
+    useContext(ModalContext)
 
   function closeModalClickingInOverlay(e) {
     if (e.currentTarget === e.target) {
@@ -32,6 +34,7 @@ export const ModalProject: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      {modalCarouselIsOpen && <ModalCarousel />}
       <OverlayBackdrop />
       <OverlayBody onClick={closeModalClickingInOverlay}>
         <Box initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
@@ -64,7 +67,7 @@ export const ModalProject: React.FC = () => {
                 width="500"
                 height="400"
               />
-              <SeeMoreButton>
+              <SeeMoreButton onClick={openModalCarousel}>
                 <p>Ver mais 5</p>
                 <Image src="/assets/mydiary1.png" alt="mydiary1" layout="fill" />
               </SeeMoreButton>
