@@ -46,4 +46,26 @@ export default createGlobalStyle`
       background: var(--tertiary);
     }
   }
+
+  .rec-dot {
+    background-color: transparent !important;
+    opacity: 50% !important;
+    box-shadow: 0 0 1px 3px var(--secondary) !important;
+  }
+  .rec-dot_active {
+    background-color: white !important;
+    opacity: 100% !important;
+    box-shadow: 0 0 1px 3px var(--secondary) !important;
+  }
+  .rec.rec-arrow {
+    background: transparent !important;
+  }
+  .rec.rec-arrow:hover {
+    background: var(--secondary) !important;
+    color: var(--text-primary) !important;
+  }
+  .rec.rec-arrow:hover:disabled, .rec.rec-arrow:focus:disabled {
+    background: transparent !important;
+    color: transparent !important;
+  }
 `
