@@ -6,13 +6,15 @@ import { useContext } from 'react'
 
 import { ModalContext } from '../../contexts/ModalContext'
 
+import { AnimatePresence } from 'framer-motion'
+
 export const Projects: React.FC = () => {
   const { modalProjectIsOpen } = useContext(ModalContext)
 
   return (
     <Container>
       <Title>Projetos</Title>
-      {modalProjectIsOpen && <ProjectModal />}
+      <AnimatePresence>{modalProjectIsOpen && <ProjectModal />}</AnimatePresence>
       <ProjectArea>
         <Project />
         <Project />

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
@@ -31,7 +32,7 @@ export const OverlayBody = styled(Overlay)`
   z-index: 3;
 `
 
-export const Box = styled.div`
+export const Box = styled(motion.div)`
   width: 60%;
   height: 85%;
 

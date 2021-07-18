@@ -27,10 +27,14 @@ export const ProjectModal: React.FC = () => {
   }
 
   return (
-    <Container>
+    <Container
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <OverlayBackdrop />
       <OverlayBody onClick={closeModalClickingInOverlay}>
-        <Box>
+        <Box initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
           <Title>MyDiary</Title>
           <PhotoBox>
             <Spotlight>
