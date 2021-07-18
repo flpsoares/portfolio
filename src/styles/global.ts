@@ -29,4 +29,21 @@ export default createGlobalStyle`
     --tertiary: #6F3287;
     --quaternary: #83459E;
   }
+
+  ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border-radius: 10px;
+    &:hover {
+      background: var(--tertiary);
+    }
+  }
 `
