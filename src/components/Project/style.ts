@@ -30,6 +30,9 @@ export const Title = styled.p`
 export const Description = styled.span`
   text-align: center;
   margin-top: 10px;
+  max-height: 80px;
+
+  overflow: hidden;
 `
 
 export const Button = styled.button`
@@ -47,6 +50,8 @@ export const Button = styled.button`
   bottom: 20px;
 
   transition: background 0.4s, border 0.4s, color 0.4s;
+
+  border: 1px solid transparent;
 
   &:hover {
     background: transparent;
