@@ -1,4 +1,5 @@
 import { useState, ReactNode, createContext } from 'react'
+import { disableScroll, enableScroll } from '../utils/handleScroll'
 
 interface ModalContextData {
   modalProjectIsOpen: boolean
@@ -16,10 +17,12 @@ export function ModalProvider({ children }: ModalProviderProps) {
   const [modalProjectIsOpen, setModalProjectIsOpen] = useState(false)
 
   const openProjectModal = () => {
+    disableScroll()
     setModalProjectIsOpen(true)
   }
 
   const closeProjectModal = () => {
+    enableScroll()
     setModalProjectIsOpen(false)
   }
 

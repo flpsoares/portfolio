@@ -1,8 +1,12 @@
 import { Button, Container, Description, Infos, Title } from './style'
 
 import Image from 'next/image'
+import { useContext } from 'react'
+import { ModalContext } from '../../contexts/ModalContext'
 
 export const Project: React.FC = () => {
+  const { openProjectModal } = useContext(ModalContext)
+
   return (
     <Container>
       <Image
@@ -17,7 +21,7 @@ export const Project: React.FC = () => {
         <Description>
           Uma rede social moderna que possibilita a postagem de textos e fotos.
         </Description>
-        <Button>Ver detalhes</Button>
+        <Button onClick={openProjectModal}>Ver detalhes</Button>
       </Infos>
     </Container>
   )

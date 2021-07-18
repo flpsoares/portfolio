@@ -13,20 +13,23 @@ import {
 } from './style'
 
 import Image from 'next/image'
-import { useEffect } from 'react'
 import { MdClose } from 'react-icons/md'
-
-import { disableScroll } from '../../utils/handleScroll'
+import { useContext } from 'react'
+import { ModalContext } from '../../contexts/ModalContext'
 
 export const ProjectModal: React.FC = () => {
-  useEffect(() => {
-    disableScroll()
-  }, [])
+  const { closeProjectModal } = useContext(ModalContext)
+
+  function closeModalClickingInOverlay(e) {
+    if (e.currentTarget === e.target) {
+      closeProjectModal()
+    }
+  }
 
   return (
     <Container>
       <OverlayBackdrop />
-      <OverlayBody>
+      <OverlayBody onClick={closeModalClickingInOverlay}>
         <Box>
           <Title>MyDiary</Title>
           <PhotoBox>
@@ -66,7 +69,7 @@ export const ProjectModal: React.FC = () => {
               Uma rede social moderna que possibilita a postagem de textos e fotos.
             </Description>
           </PhotoBox>
-          <CloseButton>
+          <CloseButton onClick={closeProjectModal}>
             <MdClose size="26" />
           </CloseButton>
         </Box>
