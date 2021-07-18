@@ -3,8 +3,8 @@ import { disableScroll, enableScroll } from '../utils/handleScroll'
 
 interface ModalContextData {
   modalProjectIsOpen: boolean
-  openProjectModal: () => void
-  closeProjectModal: () => void
+  openModalProject: () => void
+  closeModalProject: () => void
 }
 
 interface ModalProviderProps {
@@ -16,19 +16,19 @@ export const ModalContext = createContext({} as ModalContextData)
 export function ModalProvider({ children }: ModalProviderProps) {
   const [modalProjectIsOpen, setModalProjectIsOpen] = useState(false)
 
-  const openProjectModal = () => {
+  const openModalProject = () => {
     disableScroll()
     setModalProjectIsOpen(true)
   }
 
-  const closeProjectModal = () => {
+  const closeModalProject = () => {
     enableScroll()
     setModalProjectIsOpen(false)
   }
 
   return (
     <ModalContext.Provider
-      value={{ modalProjectIsOpen, openProjectModal, closeProjectModal }}
+      value={{ modalProjectIsOpen, openModalProject, closeModalProject }}
     >
       {children}
     </ModalContext.Provider>

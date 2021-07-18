@@ -1,5 +1,5 @@
 import { Project } from '../Project'
-import { ProjectModal } from '../ProjectModal'
+import { ModalProject } from '../ModalProject'
 import { Container, ProjectArea, Title } from './style'
 
 import { useContext } from 'react'
@@ -14,7 +14,7 @@ export const Projects: React.FC = () => {
   return (
     <Container>
       <Title>Projetos</Title>
-      <AnimatePresence>{modalProjectIsOpen && <ProjectModal />}</AnimatePresence>
+      <AnimatePresence>{modalProjectIsOpen && <ModalProject />}</AnimatePresence>
       <ProjectArea>
         <Project />
         <Project />

@@ -17,12 +17,12 @@ import { MdClose } from 'react-icons/md'
 import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 
-export const ProjectModal: React.FC = () => {
-  const { closeProjectModal } = useContext(ModalContext)
+export const ModalProject: React.FC = () => {
+  const { closeModalProject } = useContext(ModalContext)
 
   function closeModalClickingInOverlay(e) {
     if (e.currentTarget === e.target) {
-      closeProjectModal()
+      closeModalProject()
     }
   }
 
@@ -73,7 +73,7 @@ export const ProjectModal: React.FC = () => {
               Uma rede social moderna que possibilita a postagem de textos e fotos.
             </Description>
           </PhotoBox>
-          <CloseButton onClick={closeProjectModal}>
+          <CloseButton onClick={closeModalProject}>
             <MdClose size="26" />
           </CloseButton>
         </Box>

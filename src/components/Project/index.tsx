@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 
 export const Project: React.FC = () => {
-  const { openProjectModal } = useContext(ModalContext)
+  const { openModalProject } = useContext(ModalContext)
 
   return (
     <Container>
@@ -21,7 +21,7 @@ export const Project: React.FC = () => {
         <Description>
           Uma rede social moderna que possibilita a postagem de textos e fotos.
         </Description>
-        <Button onClick={openProjectModal}>Ver detalhes</Button>
+        <Button onClick={openModalProject}>Ver detalhes</Button>
       </Infos>
     </Container>
   )
