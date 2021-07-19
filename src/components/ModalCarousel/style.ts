@@ -29,7 +29,16 @@ export const OverlayBackdrop = styled(Overlay)`
   z-index: 5;
 `
 
-export const OverlayBody = styled(Overlay)`
+export const OverlayBody = styled(motion.div)`
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  padding: 0 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
   z-index: 6;
 `

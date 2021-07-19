@@ -18,6 +18,8 @@ import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 import { ModalCarousel } from '../ModalCarousel'
 
+import { AnimatePresence } from 'framer-motion'
+
 export const ModalProject: React.FC = () => {
   const { closeModalProject, modalCarouselIsOpen, openModalCarousel } =
     useContext(ModalContext)
@@ -34,7 +36,7 @@ export const ModalProject: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {modalCarouselIsOpen && <ModalCarousel />}
+      <AnimatePresence>{modalCarouselIsOpen && <ModalCarousel />}</AnimatePresence>
       <OverlayBackdrop />
       <OverlayBody onClick={closeModalClickingInOverlay}>
         <Box initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>

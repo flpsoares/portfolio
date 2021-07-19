@@ -14,7 +14,11 @@ export const ModalCarousel: React.FC = () => {
   return (
     <Container>
       <OverlayBackdrop>
-        <OverlayBody>
+        <OverlayBody
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+        >
           <Carousel isRTL={false}>
             <Image
               src="/assets/mydiary1.png"
