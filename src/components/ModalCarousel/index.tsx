@@ -7,9 +7,14 @@ import { MdClose } from 'react-icons/md'
 
 import { ModalContext } from '../../contexts/ModalContext'
 import { useContext } from 'react'
+import { ProjectContext } from '../../contexts/ProjectContext'
 
 export const ModalCarousel: React.FC = () => {
   const { closeModalCarousel } = useContext(ModalContext)
+
+  const { images } = useContext(ProjectContext)
+
+  console.log(images[0].url)
 
   return (
     <Container>
@@ -20,20 +25,18 @@ export const ModalCarousel: React.FC = () => {
           exit={{ scale: 0 }}
         >
           <Carousel isRTL={false}>
-            <Image
-              src="/assets/mydiary1.png"
-              alt="mydiary1"
-              objectFit="contain"
-              width="1400"
-              height="600"
-            />
-            <Image
-              src="/assets/mydiary1.png"
-              alt="mydiary1"
-              objectFit="contain"
-              width="1400"
-              height="600"
-            />
+            {images?.map((image) => {
+              return (
+                <Image
+                  key={image.id}
+                  src={image.url}
+                  alt={image.filename}
+                  objectFit="contain"
+                  width="1400"
+                  height="600"
+                />
+              )
+            })}
           </Carousel>
         </OverlayBody>
         <CloseButton onClick={closeModalCarousel}>
