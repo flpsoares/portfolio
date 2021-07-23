@@ -2,7 +2,7 @@ import { api } from '../api'
 
 class ProjectApi {
   public async list() {
-    return api.get<App.Project>('/projects').then((res) => res.data)
+    return api.get('/projects').then((res) => res.data)
   }
 }
 
