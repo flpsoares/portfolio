@@ -1,12 +1,15 @@
 import GlobalStyle from '../styles/global'
 
 import { ModalProvider } from '../contexts/ModalContext'
+import { ProjectProvider } from '../contexts/ProjectContext'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ModalProvider>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ProjectProvider>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ProjectProvider>
     </ModalProvider>
   )
 }
