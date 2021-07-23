@@ -2,7 +2,7 @@ import { Project } from '../Project'
 import { ModalProject } from '../ModalProject'
 import { Container, ProjectArea, Title } from './style'
 
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useState, useEffect, SetStateAction } from 'react'
 
 import { ModalContext } from '../../contexts/ModalContext'
 
@@ -15,7 +15,7 @@ export const Projects: React.FC = () => {
   const [projects, setProjects] = useState<App.Project[]>([])
 
   useEffect(() => {
-    ProjectApi.list().then((res) => setProjects(Array(res)))
+    ProjectApi.list().then((res) => setProjects(res))
   }, [])
 
   return (
@@ -23,13 +23,13 @@ export const Projects: React.FC = () => {
       <Title>Projetos</Title>
       <AnimatePresence>{modalProjectIsOpen && <ModalProject />}</AnimatePresence>
       <ProjectArea>
-        {projects?.map((project, index) => {
+        {projects?.map((project) => {
           return (
             <Project
-              key={project[index].id}
-              name={project[index].name}
-              description={project[index].description}
-              images={project[index].images}
+              key={project.id}
+              name={project.name}
+              description={project.description}
+              images={project.images}
             />
           )
         })}
