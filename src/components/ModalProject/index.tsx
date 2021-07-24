@@ -8,7 +8,7 @@ import {
   OverlayBody,
   Photobook,
   PhotoBox,
-  SeeMoreButton,
+  SeeAllButton,
   Spotlight,
   Title
 } from './style'
@@ -74,10 +74,10 @@ export const ModalProject: React.FC = () => {
                 width="500"
                 height="400"
               />
-              <SeeMoreButton onClick={openModalCarousel}>
+              <SeeAllButton onClick={openModalCarousel}>
                 <p>Ver todas</p>
                 <Image src={images[4].url} alt={images[4].filename} layout="fill" />
-              </SeeMoreButton>
+              </SeeAllButton>
             </Photobook>
             <Description>{description}</Description>
           </PhotoBox>
