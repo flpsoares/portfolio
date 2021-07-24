@@ -81,12 +81,12 @@ export const Photobook = styled.div`
   margin-left: 20px;
 `
 
-export const SeeMoreButton = styled.button`
+export const SeeAllButton = styled.button`
   color: var(--secondary);
   font-size: 20px;
   font-weight: 600;
 
-  border-radius: 3px;
+  border-radius: 5px;
 
   position: relative;
 
@@ -103,16 +103,17 @@ export const SeeMoreButton = styled.button`
   }
 
   img {
-    filter: brightness(0.4);
+    filter: brightness(0.2);
     transition: filter 0.1s;
   }
 
   &:hover {
+    background: rgba(20, 20, 20, 0.2);
     p {
       filter: brightness(0.8);
     }
     img {
-      filter: brightness(0.2);
+      filter: brightness(0.1);
     }
   }
 `
