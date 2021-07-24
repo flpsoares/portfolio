@@ -17,9 +17,9 @@ export const Project: React.FC<App.Project> = ({ name, description, images }) =>
   return (
     <Container>
       <Image
-        src={images[0].url}
+        src={images[0]?.url ? images[0].url : '/assets/project-image.svg'}
         objectFit="cover"
-        alt="mydiary1"
+        alt={images[0]?.filename ? images[0].filename : 'project'}
         width={300}
         height={200}
       />
