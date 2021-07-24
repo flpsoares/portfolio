@@ -24,7 +24,7 @@ export const Projects: React.FC = () => {
     <Container>
       <Title>Projetos</Title>
       <AnimatePresence>{modalProjectIsOpen && <ModalProject />}</AnimatePresence>
-      <Carousel isRTL={false}>
+      <Carousel outerSpacing={100} itemsToShow={3} isRTL={false}>
         {projects?.map((project) => {
           return (
             <Project
