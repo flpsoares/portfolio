@@ -14,12 +14,17 @@ export const ModalCarousel: React.FC = () => {
 
   const { images } = useContext(ProjectContext)
 
-  console.log(images[0].url)
+  function closeModalClickingInOverlay(e) {
+    if (e.currentTarget === e.target) {
+      closeModalCarousel()
+    }
+  }
 
   return (
     <Container>
-      <OverlayBackdrop>
+      <OverlayBackdrop onClick={closeModalClickingInOverlay}>
         <OverlayBody
+          onClick={closeModalClickingInOverlay}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           exit={{ scale: 0 }}
