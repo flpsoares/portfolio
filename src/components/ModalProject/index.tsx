@@ -66,18 +66,21 @@ export const ModalProject: React.FC = () => {
                   alt={images[1].filename}
                   width="500"
                   height="400"
+                  objectFit="cover"
                 />
                 <Image
                   src={images[2].url}
                   alt={images[2].filename}
                   width="500"
                   height="400"
+                  objectFit="cover"
                 />
                 <Image
                   src={images[3].url}
                   alt={images[3].filename}
                   width="500"
                   height="400"
+                  objectFit="cover"
                 />
                 <SeeAllButton onClick={openModalCarousel}>
                   <p>Ver todas</p>

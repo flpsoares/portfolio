@@ -37,8 +37,8 @@ export const ModalCarousel: React.FC = () => {
                   src={image.url}
                   alt={image.filename}
                   objectFit="contain"
-                  width="1400"
-                  height="600"
+                  width="1630"
+                  height="900"
                 />
               )
             })}
