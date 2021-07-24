@@ -37,7 +37,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Dev | Filipe Soares</title>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap"
