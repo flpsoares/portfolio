@@ -2,12 +2,14 @@ import { Project } from '../Project'
 import { ModalProject } from '../ModalProject'
 import { Container, ProjectArea, Title } from './style'
 
-import { useContext, useState, useEffect, SetStateAction } from 'react'
+import { useContext, useState, useEffect } from 'react'
 
 import { ModalContext } from '../../contexts/ModalContext'
 
 import { AnimatePresence } from 'framer-motion'
 import ProjectApi from '../../services/api/ProjectApi'
+
+import Carousel from 'react-elastic-carousel'
 
 export const Projects: React.FC = () => {
   const { modalProjectIsOpen } = useContext(ModalContext)
@@ -22,7 +24,7 @@ export const Projects: React.FC = () => {
     <Container>
       <Title>Projetos</Title>
       <AnimatePresence>{modalProjectIsOpen && <ModalProject />}</AnimatePresence>
-      <ProjectArea>
+      <Carousel isRTL={false}>
         {projects?.map((project) => {
           return (
             <Project
@@ -33,7 +35,7 @@ export const Projects: React.FC = () => {
             />
           )
         })}
-      </ProjectArea>
+      </Carousel>
     </Container>
   )
 }
