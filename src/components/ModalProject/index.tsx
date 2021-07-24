@@ -15,7 +15,7 @@ import {
 
 import Image from 'next/image'
 import { MdClose } from 'react-icons/md'
-import { useContext } from 'react'
+import { EventHandler, useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 import { ModalCarousel } from '../ModalCarousel'
 
@@ -34,6 +34,10 @@ export const ModalProject: React.FC = () => {
     }
   }
 
+  function verifyImage() {
+    return images.length > 0
+  }
+
   return (
     <Container
       initial={{ opacity: 0 }}
@@ -45,42 +49,50 @@ export const ModalProject: React.FC = () => {
       <OverlayBody onClick={closeModalClickingInOverlay}>
         <Box initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
           <Title>{name}</Title>
-          <PhotoBox>
-            <Spotlight>
-              <Image
-                src={images[0].url}
-                alt={images[0].filename}
-                objectFit="contain"
-                width="500"
-                height="411"
-              />
-            </Spotlight>
-            <Photobook>
-              <Image
-                src={images[1].url}
-                alt={images[1].filename}
-                width="500"
-                height="400"
-              />
-              <Image
-                src={images[2].url}
-                alt={images[2].filename}
-                width="500"
-                height="400"
-              />
-              <Image
-                src={images[3].url}
-                alt={images[3].filename}
-                width="500"
-                height="400"
-              />
-              <SeeAllButton onClick={openModalCarousel}>
-                <p>Ver todas</p>
-                <Image src={images[4].url} alt={images[4].filename} layout="fill" />
-              </SeeAllButton>
-            </Photobook>
+          {verifyImage() ? (
+            <PhotoBox>
+              <Spotlight>
+                <Image
+                  src={images[0].url}
+                  alt={images[0].filename}
+                  objectFit="contain"
+                  width="500"
+                  height="411"
+                />
+              </Spotlight>
+              <Photobook>
+                <Image
+                  src={images[1].url}
+                  alt={images[1].filename}
+                  width="500"
+                  height="400"
+                />
+                <Image
+                  src={images[2].url}
+                  alt={images[2].filename}
+                  width="500"
+                  height="400"
+                />
+                <Image
+                  src={images[3].url}
+                  alt={images[3].filename}
+                  width="500"
+                  height="400"
+                />
+                <SeeAllButton onClick={openModalCarousel}>
+                  <p>Ver todas</p>
+                  <Image
+                    src={images[4].url}
+                    alt={images[4].filename}
+                    layout="fill"
+                  />
+                </SeeAllButton>
+              </Photobook>
+              <Description>{description}</Description>
+            </PhotoBox>
+          ) : (
             <Description>{description}</Description>
-          </PhotoBox>
+          )}
           <CloseButton onClick={closeModalProject}>
             <MdClose size="26" />
           </CloseButton>

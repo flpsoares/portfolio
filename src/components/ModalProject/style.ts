@@ -34,7 +34,8 @@ export const OverlayBody = styled(Overlay)`
 
 export const Box = styled(motion.div)`
   width: 60%;
-  height: 85%;
+  max-height: 85%;
+  /* min-height: 30%; */
 
   border-radius: 5px;
   padding: 24px;
@@ -47,6 +48,7 @@ export const Box = styled(motion.div)`
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
 `
 
@@ -121,7 +123,7 @@ export const SeeAllButton = styled.button`
 export const Description = styled.h3`
   grid-area: description;
 
-  margin-top: 20px;
+  margin-top: 50px;
 `
 
 export const CloseButton = styled.button`
