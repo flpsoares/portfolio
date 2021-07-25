@@ -9,17 +9,3 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `
-
-export const Title = styled.h1`
-  padding-bottom: 40px;
-  font-style: italic;
-`
-
-export const ProjectArea = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: auto;
-  justify-content: space-evenly;
-  row-gap: 60px;
-`
