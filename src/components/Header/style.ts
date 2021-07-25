@@ -5,9 +5,18 @@ export const Container = styled.nav`
   align-items: center;
   justify-content: center;
 
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  background: var(--dark-primary);
+  width: 100%;
   padding: 0 100px;
 
   height: 80px;
+
+  z-index: 10;
 `
 
 export const Menu = styled.ul`
