@@ -29,6 +29,7 @@ export const Item = styled.li`
     text-decoration: none;
     color: var(--text-primary);
     font-size: 26px;
+    font-weight: 600;
 
     display: flex;
     flex-direction: column;
