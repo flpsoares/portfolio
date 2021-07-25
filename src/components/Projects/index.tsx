@@ -1,6 +1,7 @@
 import { Project } from '../Project'
 import { ModalProject } from '../ModalProject'
-import { Container, ProjectArea, Title } from './style'
+import { Container, ProjectArea } from './style'
+import { Title } from '../Title'
 
 import { useContext, useState, useEffect } from 'react'
 
