@@ -5,6 +5,8 @@ export const Container = styled.nav`
   align-items: center;
   justify-content: center;
 
+  border-bottom: 2px solid var(--secondary);
+
   position: fixed;
   top: 0;
   left: 50%;
