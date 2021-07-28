@@ -7,6 +7,6 @@ export const Container = styled.div`
   margin-bottom: 60px;
 
   span {
-    color: var(--tertiary);
+    color: var(--primary);
   }
 `
