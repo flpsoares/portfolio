@@ -21,13 +21,13 @@ export default createGlobalStyle`
   }
 
   :root {
-    --dark-primary: rgb(17, 17, 17);
-    --dark-secondary: rgb(25, 25, 25);
+    --dark-primary: rgb(13,16,17);
+    --dark-secondary: rgb(22,25,30);
     --text-primary: #c9d1d9;
-    --primary: #420F56;
-    --secondary: #591F6F;
-    --tertiary: #6F3287;
-    --quaternary: #83459E;
+    --primary: #6451CE;
+    --secondary: #4834B8;
+    --tertiary: #382990;
+    --quaternary: #291D69;
   }
 
   ::-webkit-scrollbar {
