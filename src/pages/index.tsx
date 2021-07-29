@@ -1,3 +1,4 @@
+import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Projects } from '../components/Projects'
 import { Space } from '../components/Space'
@@ -12,6 +13,7 @@ export const Home: React.FC = () => {
       <Header />
       <Projects />
       <Technologies />
+      <Footer />
     </Container>
   )
 }
