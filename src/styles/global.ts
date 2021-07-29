@@ -20,6 +20,19 @@ export default createGlobalStyle`
     color: var(--text-primary);
   }
 
+  ul {
+    list-style: none;
+    line-height: 40px;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-primary);
+
+    font-size: 22px;
+    font-weight: 500;
+  }
+
   :root {
     --dark-primary: rgb(13,16,17);
     --dark-secondary: rgb(22,25,30);
