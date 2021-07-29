@@ -13,9 +13,6 @@ export const Header: React.FC = () => {
         <Item>
           <a href="#">Tecnologias</a>
         </Item>
-        <Item>
-          <a href="#">Contato</a>
-        </Item>
       </Menu>
     </Container>
   )
