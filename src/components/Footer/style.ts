@@ -81,7 +81,6 @@ export const Projects = styled(Layout)`
 
   a {
     font-size: 18px;
-    cursor: pointer;
 
     &:hover {
       filter: brightness(1.1);

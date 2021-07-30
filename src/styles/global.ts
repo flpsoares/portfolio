@@ -29,6 +29,8 @@ export default createGlobalStyle`
     text-decoration: none;
     color: var(--text-primary);
 
+    cursor: pointer;
+
     font-size: 22px;
     font-weight: 500;
   }
