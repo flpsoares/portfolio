@@ -4,7 +4,7 @@ import { Title } from '../Title'
 
 export const About: React.FC = () => {
   return (
-    <Container>
+    <Container id="about">
       <Title>Sobre</Title>
       <Box>
         <Content>

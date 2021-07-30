@@ -22,7 +22,7 @@ export const Projects: React.FC = () => {
   }, [])
 
   return (
-    <Container>
+    <Container id="project">
       <Title>Projetos</Title>
       <AnimatePresence>{modalProjectIsOpen && <ModalProject />}</AnimatePresence>
       <Carousel outerSpacing={100} itemsToShow={3} isRTL={false}>

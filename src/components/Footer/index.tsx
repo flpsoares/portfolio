@@ -12,6 +12,8 @@ import { AiFillGithub, AiFillLinkedin, AiOutlinePhone } from 'react-icons/ai'
 
 import { HiOutlineMail } from 'react-icons/hi'
 
+import { Link } from 'react-scroll'
+
 export const Footer: React.FC = () => {
   return (
     <Container>
@@ -35,13 +37,40 @@ export const Footer: React.FC = () => {
           <Title>Projetos</Title>
           <ul>
             <li>
-              <a href="#">Sobre</a>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
+                Sobre
+              </Link>
             </li>
             <li>
-              <a href="#">Projetos</a>
+              <Link
+                activeClass="active"
+                to="project"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
+                Projetos
+              </Link>
             </li>
             <li>
-              <a href="#">Tecnologias</a>
+              <Link
+                activeClass="active"
+                to="technology"
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+              >
+                Tecnologias
+              </Link>
             </li>
           </ul>
         </Projects>

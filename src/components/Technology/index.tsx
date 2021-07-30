@@ -10,7 +10,7 @@ interface TechnologyProps {
 
 export const Technology: React.FC<TechnologyProps> = ({ title, url, alt }) => {
   return (
-    <Container>
+    <Container id="technology">
       <ImageArea>
         <Image src={url} objectFit="cover" alt={alt} layout="fill" />
       </ImageArea>
