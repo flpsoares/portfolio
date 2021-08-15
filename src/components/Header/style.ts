@@ -18,7 +18,7 @@ export const Container = styled.nav`
 
   height: 80px;
 
-  z-index: 10;
+  z-index: 1;
 `
 
 export const Menu = styled.ul`
