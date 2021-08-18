@@ -5,13 +5,19 @@ import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 import { ProjectContext } from '../../contexts/ProjectContext'
 
-export const Project: React.FC<App.Project> = ({ name, description, images }) => {
+export const Project: React.FC<App.Project> = ({
+  name,
+  link,
+  description,
+  images,
+  technologies
+}) => {
   const { openModalProject } = useContext(ModalContext)
   const { GetProjectInfo } = useContext(ProjectContext)
 
   const handleClick = () => {
     openModalProject()
-    GetProjectInfo(name, description, images)
+    GetProjectInfo(name, link, description, images, technologies)
   }
 
   return (

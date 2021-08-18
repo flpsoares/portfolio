@@ -31,8 +31,10 @@ export const Projects: React.FC = () => {
             <Project
               key={project.id}
               name={project.name}
+              link={project.link}
               description={project.description}
               images={project.images}
+              technologies={project.technologies}
             />
           )
         })}

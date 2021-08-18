@@ -35,96 +35,32 @@ export const OverlayBody = styled(Overlay)`
 export const Box = styled(motion.div)`
   width: 60%;
   max-height: 85%;
-  /* min-height: 30%; */
+
+  overflow: hidden;
 
   border-radius: 5px;
   padding: 24px;
-
-  margin: auto;
 
   background: rgba(0, 0, 0, 0.7);
 
   position: relative;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: column;
 `
 
-export const Title = styled.h1``
-
-export const PhotoBox = styled.div`
-  width: 100%;
-  height: 100%;
-
-  margin-top: 20px;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 400px 1fr;
-  grid-template-areas:
-    'spotlight photobook'
-    'description description';
-`
-
-export const Spotlight = styled.div`
-  grid-area: spotlight;
-`
-
-export const Photobook = styled.div`
-  grid-area: photobook;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 26px;
-
-  margin-left: 20px;
-`
-
-export const SeeAllButton = styled.button`
-  color: var(--secondary);
-  font-size: 20px;
-  font-weight: 600;
-
-  border-radius: 5px;
-
-  position: relative;
-
+export const BoxWrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    z-index: 1;
-    color: var(--text-primary);
-    font-size: 20px;
-    font-weight: 600;
-    transition: filter 0.1s;
-  }
-
-  img {
-    filter: brightness(0.2);
-    transition: filter 0.1s;
-  }
-
-  &:hover {
-    background: rgba(20, 20, 20, 0.2);
-    p {
-      filter: brightness(0.8);
-    }
-    img {
-      filter: brightness(0.1);
-    }
-  }
+  gap: 28px;
+  margin-bottom: 28px;
 `
 
-export const Description = styled.h3`
-  grid-area: description;
-
-  margin-top: 50px;
+export const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 28px;
 `
+
+export const Description = styled.h3``
 
 export const CloseButton = styled.button`
   position: absolute;
@@ -137,5 +73,97 @@ export const CloseButton = styled.button`
 
   &:hover {
     filter: brightness(0.8);
+  }
+`
+
+export const TechnologiesUsed = styled.ul`
+  line-height: 32px;
+  list-style: disc;
+`
+
+export const Technologies = styled.li`
+  font-weight: 600;
+`
+
+export const ProjectLink = styled.a`
+  text-align: center;
+  padding: 10px;
+
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: scale(1.2, 1.2);
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+`
+
+export const SeePhotos = styled.button`
+  color: var(--secondary);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+
+  width: 160px;
+  height: 160px;
+
+  p {
+    z-index: 1;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 600;
+    transition: filter 0.1s;
+  }
+
+  img {
+    filter: brightness(0.5);
+    transition: filter 0.1s;
+  }
+  &:hover {
+    background: rgba(20, 20, 20, 0.2);
+    p {
+      filter: brightness(0.8);
+    }
+    img {
+      filter: brightness(0.1);
+    }
   }
 `
