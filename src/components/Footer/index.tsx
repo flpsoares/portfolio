@@ -16,7 +16,7 @@ import { Link } from 'react-scroll'
 
 export const Footer: React.FC = () => {
   return (
-    <Container>
+    <Container id="footer">
       <Header>
         <span>Redes sociais</span>
         <div>

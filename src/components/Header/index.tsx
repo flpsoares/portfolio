@@ -42,6 +42,18 @@ export const Header: React.FC = () => {
             Tecnologias
           </Link>
         </Item>
+        <Item>
+          <Link
+            activeClass="active"
+            to="footer"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            Contato
+          </Link>
+        </Item>
       </Menu>
     </Container>
   )
