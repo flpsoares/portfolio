@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <ModalProvider>
       <ProjectProvider>
         <Head>
-          <title>Dev | Filipe Soares</title>
+          <title>Filipe Soares Desenvolvedor Web Fullstack</title>
         </Head>
         <GlobalStyle />
         <Component {...pageProps} />
