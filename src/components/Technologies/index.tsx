@@ -5,7 +5,7 @@ import { Technology } from '../Technology'
 
 export const Technologies: React.FC = () => {
   return (
-    <Container>
+    <Container id="technology">
       <Title>Tecnologias</Title>
       <Box>
         <Technology
