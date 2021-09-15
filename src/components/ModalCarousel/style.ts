@@ -43,6 +43,12 @@ export const OverlayBody = styled(motion.div)`
   z-index: 6;
 `
 
+export const Image = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: 90vh;
+`
+
 export const CloseButton = styled.button`
   position: absolute;
   top: 100px;

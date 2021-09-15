@@ -59,3 +59,9 @@ export const Button = styled.button`
     color: var(--secondary);
   }
 `
+
+export const Image = styled.img`
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+`

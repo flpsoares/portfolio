@@ -11,10 +11,10 @@ import {
   SeePhotos,
   Technologies,
   TechnologiesUsed,
-  Title
+  Title,
+  Image
 } from './style'
 
-import Image from 'next/image'
 import { MdClose } from 'react-icons/md'
 import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
@@ -62,7 +62,7 @@ export const ModalProject: React.FC = () => {
           ) : (
             <SeePhotos onClick={openModalCarousel}>
               <p>Ver imagens</p>
-              <Image src={images[1].url} alt={images[1].filename} layout="fill" />
+              <Image src={images[1].url} alt={images[1].filename} />
             </SeePhotos>
           )}
           <CloseButton onClick={closeModalProject}>

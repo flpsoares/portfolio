@@ -1,7 +1,6 @@
-import { CloseButton, Container, OverlayBackdrop, OverlayBody } from './style'
+import { CloseButton, Container, OverlayBackdrop, OverlayBody, Image } from './style'
 
 import Carousel from 'react-elastic-carousel'
-import Image from 'next/image'
 
 import { MdClose } from 'react-icons/md'
 
@@ -31,16 +30,7 @@ export const ModalCarousel: React.FC = () => {
         >
           <Carousel isRTL={false}>
             {images?.map((image) => {
-              return (
-                <Image
-                  key={image.id}
-                  src={image.url}
-                  alt={image.filename}
-                  objectFit="contain"
-                  width="1630"
-                  height="900"
-                />
-              )
+              return <Image key={image.id} src={image.url} alt={image.filename} />
             })}
           </Carousel>
         </OverlayBody>

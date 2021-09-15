@@ -1,6 +1,5 @@
-import { Button, Container, Description, Infos, Title } from './style'
+import { Button, Container, Description, Infos, Title, Image } from './style'
 
-import Image from 'next/image'
 import { useContext } from 'react'
 import { ModalContext } from '../../contexts/ModalContext'
 import { ProjectContext } from '../../contexts/ProjectContext'
@@ -24,10 +23,7 @@ export const Project: React.FC<App.Project> = ({
     <Container>
       <Image
         src={images[0]?.url ? images[0].url : '/assets/project-image.svg'}
-        objectFit="cover"
         alt={images[0]?.filename ? images[0].filename : 'project'}
-        width={300}
-        height={200}
       />
       <Infos>
         <Title>{name}</Title>
